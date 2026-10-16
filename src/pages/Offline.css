@@ -1,0 +1,103 @@
+.offline-scrapbook {
+  padding-block: 28px 42px;
+  color: var(--color-burgundy);
+}
+.scrapbook-margin {
+  font: .61rem/1.6 var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.scrapbook-board {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1.65;
+  margin-top: 26px;
+}
+.scrapbook-heading {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  text-align: center;
+}
+.scrapbook-heading h1 {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+.scrapbook-heading h1 em { font-style: italic; }
+.scrapbook-polaroid {
+  position: absolute;
+  top: 24%;
+  left: 35%;
+  width: 28%;
+  padding: 12px 12px 36px;
+  transform: rotate(-5deg);
+  background: var(--color-warm-white);
+  border: 1px solid #d9cdc0;
+  box-shadow: 1px 4px 9px #3e272310;
+  z-index: 2;
+}
+.scrapbook-polaroid::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 31%;
+  width: 39%;
+  height: 31px;
+  background: #d8c4a5a6;
+  transform: rotate(-6deg);
+  clip-path: polygon(0 6%, 97% 0, 100% 19%, 96% 35%, 100% 53%, 97% 70%, 100% 96%, 2% 100%, 4% 77%, 0 58%, 3% 38%);
+}
+.scrapbook-polaroid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.scrapbook-piece {
+  position: absolute;
+  display: block;
+  height: auto;
+  overflow: hidden;
+  mix-blend-mode: darken;
+  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent), linear-gradient(to bottom, transparent, #000 3%, #000 97%, transparent);
+  mask-composite: intersect;
+}
+.scrapbook-food { width: 30%; left: 0; top: 23%; }
+.scrapbook-cafe { width: 24%; left: 5%; top: 62%; }
+.scrapbook-walks { width: 33%; right: 0; top: 20%; }
+.scrapbook-movies { width: 28%; right: 1%; top: 66%; mix-blend-mode: normal; mask-image: none; }
+
+/* Recompose the illustrations beneath the portrait on smaller screens. */
+@media (max-width: 1000px) {
+  .offline-scrapbook { max-width: 560px; padding-block: 24px 36px; }
+  .scrapbook-margin { font-size: .53rem; letter-spacing: .08em; }
+  .scrapbook-board {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+    gap: 28px 12px;
+    aspect-ratio: auto;
+    margin-top: 30px;
+  }
+  .scrapbook-heading, .scrapbook-polaroid, .scrapbook-piece {
+    position: relative;
+    inset: auto;
+  }
+  .scrapbook-heading { grid-column: 1 / -1; }
+  .scrapbook-heading h1 { font-size: clamp(2.1rem, 8.5vw, 3.3rem); }
+  .scrapbook-polaroid {
+    grid-column: 1 / -1;
+    width: 66%;
+    max-width: 290px;
+    justify-self: center;
+    margin-block: 20px;
+    padding: 10px 10px 30px;
+  }
+  .scrapbook-food { width: 100%; align-self: start; }
+  .scrapbook-cafe { width: 100%; margin-top: 40px; }
+  .scrapbook-walks { grid-column: 1 / -1; width: 94%; justify-self: end; }
+  .scrapbook-movies { grid-column: 1 / -1; width: 82%; justify-self: start; margin-top: 4px; }
+}

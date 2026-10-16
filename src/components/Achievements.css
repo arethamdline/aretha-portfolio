@@ -1,0 +1,31 @@
+.achievements-section { margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--line); }
+.achievements-heading { margin-bottom: 36px; }
+.achievements-heading .eyebrow { color: var(--color-burgundy); }
+.achievements-heading h2 { max-width: 680px; margin-top: 18px; }
+.achievements-list { list-style: none; margin: 0; padding: 0; }
+.achievements-list > li { border-top: 1px solid var(--line); }
+.achievements-list > li:last-child { border-bottom: 1px solid var(--line); }
+.achievement-row { display: grid; grid-template-columns: 90px minmax(0, 1fr) 160px; align-items: baseline; gap: 28px; padding: 24px 0; transition: background-color .2s ease; }
+.achievement-row:hover, .achievement-row:focus-within { background-color: #70283805; }
+.achievement-year { font: .78rem/1.7 var(--font-sans); color: var(--muted); }
+.achievement-details { min-width: 0; }
+.achievement-details h3 { font-size: 1.55rem; line-height: 1.2; overflow-wrap: anywhere; }
+.achievement-details a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 5px; }
+.achievement-details a:hover { text-decoration-color: var(--color-burgundy); }
+.achievement-details p { max-width: 660px; margin-top: 12px; font-size: .88rem; color: var(--muted); }
+.achievement-award { font-size: .82rem; text-align: right; color: var(--muted); }
+.achievement-featured { padding-block: 30px; }
+.achievement-featured h3 { font-size: 1.85rem; }
+.achievement-featured .achievement-award { color: var(--color-burgundy); font-weight: 500; }
+@media (max-width: 700px) {
+  .achievements-section { margin-top: 28px; padding-top: 34px; }
+  .achievements-heading { margin-bottom: 28px; }
+  .achievements-heading h2 { font-size: 2.6rem; }
+  .achievement-row { grid-template-columns: minmax(0, 1fr); gap: 10px; padding-block: 22px; }
+  .achievement-featured { padding-block: 26px; }
+  .achievement-featured h3 { font-size: 1.7rem; }
+  .achievement-award { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .achievement-row { transition: none; }
+}
