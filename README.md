@@ -1,6 +1,6 @@
 # Aretha — a little corner of the internet
 
-The existing portfolio now has four pages, with the original portrait, terminal, draft/wireframe toggle, content, and palette retained. The active project is this folder: `outputs/aretha-portfolio-kit/aretha-portfolio`. The sibling `outputs/aretha-portfolio` is an older copy; it was not modified during this redesign.
+The existing portfolio now has four pages, with the original portrait, terminal, portfolio title toolbar, content, and palette retained. The active project is this folder: `outputs/aretha-portfolio-kit/aretha-portfolio`. The sibling `outputs/aretha-portfolio` is an older copy; it was not modified during this redesign.
 
 ## Run and check
 
@@ -40,7 +40,7 @@ All personal facts remain in **src/content.ts**.
 | `pageContent` | Page headings, subtitles, browser titles and descriptions |
 | `siteCopy` | About/contact headings and footer line |
 | `terminalCopy` | Terminal greeting and small code-style values |
-| `draftSettings.showToolbar` | Show or hide the draft/wireframe toolbar |
+| `draftSettings.showToolbar` | Show or hide the portfolio title toolbar |
 
 `previewTitle` supplies the typographic project illustration. `teaser: true` keeps a project’s demo and source links hidden, even if filled in. The BoxBuddy entry remains titled “Something in the Works,” with a general text composition and no product screenshot. Automation copy stays at the high level supplied in your content. Buildwise is explicitly identified as Bytewise’s product.
 
@@ -107,7 +107,7 @@ The portrait’s “>_ hi!” button opens a native modal dialog. It overlaps th
 - Responsive checks covered desktop, tablet and phone widths; the terminal dialog was additionally checked at an actual 320px viewport without page or dialog overflow.
 - Both terminals work; help, whoami, projects, contact, clear, unknown input and empty input were exercised in the popup.
 - Popup Escape restores focus to the launcher, its scroll lock is released, and duplicate input IDs are avoided.
-- Keyboard project expansion/collapse, experience highlights, mobile menu/Escape, wireframe toggle, and contact navigation were checked.
+- Keyboard project expansion/collapse, experience highlights, mobile menu/Escape, and contact navigation were checked.
 - Development shows one Research Assistant draft; production renders six confirmed experiences and no Research Assistant entry.
 - Portrait loaded successfully; original photo hash is unchanged. No browser console errors were observed in the final production checks.
 - Reduced-motion handling is implemented in Motion and CSS; runtime preference emulation was not available in the browser tool.

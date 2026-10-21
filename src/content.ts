@@ -261,8 +261,8 @@ export const experiences: Experience[] = [
     id: 'bytewise',
     group: 'professional',
 
-    role: 'Software Engineering & AI Automation',
-    organization: 'Bytewise',
+    role: 'Software Engineer',
+    organization: 'Bytewise Coding Limited',
     period: '2026 — Present',
     location: 'Hong Kong',
     category: 'work',
@@ -539,7 +539,7 @@ export const draftSettings = {
 export const portrait = {
   imageUrl: '/aretha.jpeg',
   alt: 'Aretha Madeline Budiman',
-  caption: 'a little glimpse into my world',
+  caption: 'It is nice to meet you!',
 };
 
 export const homeSelections = {
@@ -599,17 +599,17 @@ export const offlineGallery = [
 ];
 
 export const siteCopy = {
-  aboutHeading: ['A person first.', 'Always a little curious.'],
+  aboutHeading: ['A girl full of', 'curiosity.'],
   contactHeading: ['A hello can be', 'a lovely beginning.'],
   contactIntro: 'An idea, a question, or just a little hello. My inbox is open.',
-  footer: 'Made with curiosity & a little care.',
+  footer: 'Made with curiosity',
 };
 
 export const pageContent = {
   home: {
-    title: 'A Little Corner of the Internet',
+    title: 'Personal Portfolio',
     description: "A collection of things I've made, places I've been, and ideas I'm still exploring. Personal website of Aretha Madeline Budiman, AI & Data Science student at HKU.",
-  },
+  }, 
   work: {
     title: 'Work & Explorations',
     heading: "Things I've made & explored.",
@@ -632,7 +632,7 @@ export const pageContent = {
 };
 
 export const terminalCopy = {
-  launcherTitle: 'hi!',
+  launcherTitle: 'click me',
   launcherHint: 'click to explore',
   dialogTitle: 'Hello from the other side.',
   dialogDescription: 'A little way to get to know me. Type help to see what you can ask.',
